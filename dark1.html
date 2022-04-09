@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark and light mode</title>
+    <!-- ===========font icon=========================== -->
+    <script src="https://kit.fontawesome.com/c008bbf441.js" crossorigin="anonymous"></script>
+    <!-- ==========================style================================= -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --primary-color: #edf2fc;
+            --secondary-color: #212121;
+          
+        }
+        .dark-mode {
+            --primary-color: #000106;
+            --secondary-color: #fff;
+           
+        }
+        /* .logo-filter {
+            filter: invert(100%);
+        } */
+
+        #icon {
+            width: 30px;
+            cursor: pointer;
+        }
+        nav ul {
+            flex: 1;
+            text-align: right;
+        }
+        .hero {
+            height: 100vh;
+            width: 100%;
+            background: var(--primary-color);
+            font-family: sans-serif;
+            position: relative;
+            padding-left: 50px;
+        }
+        nav {
+            width: 84%;
+            margin: auto;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo {
+            width: 71px;
+            cursor: pointer;
+            left: 80px;
+            position: absolute;
+            top: 5px;
+            filter: invert(50%);
+            border-radius: 50%;
+            border: 5px solid gray;
+            
+         }
+        
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--secondary-color);
+        }
+        nav ul li a:hover {
+            color: #ff4321;
+        }
+        .info h1 {
+            font-size: 70px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            margin-top: 100px;
+            margin-left: 50px;
+        }
+        span {
+            color: #ff4321;
+        }
+        .info p {
+            color: var(--secondary-color);
+            line-height: 22px;
+            margin-left: 50px;
+        }
+        .info a {
+            background:var(--secondary-color);
+            padding: 10px 18px;
+            text-decoration: none;
+            color: var(--primary-color);
+            display: inline-block;
+            margin: 30px 0;
+            border-radius: 5px;
+            margin-left: 199px;
+        }
+        .img-box{
+            width: 45%;
+            height: 80%;
+            position: absolute;
+            bottom: 0;
+            right: 100px;
+        }
+        .img-box img {
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            transition: bottom 1s, left 1s;
+        }
+        .img-box:hover .back-img{
+            bottom: 40px;
+        }
+        .img-box:hover .main-img{
+            left: 54%;
+        }
+        .social-links {
+            margin-left: 8%;
+            margin-top: 100px;
+            
+        }
+        .social-links a{
+            font-size: 40px;
+            color: var(--secondary-color);
+            margin-right: 50px;
+
+        }
+        .social-links a:hover {
+            color: #ff4321;
+        }
+    </style>
+</head>
+<body>
+<!-- ==============================html==================================== -->
+<div class="hero">
+    <nav>
+        <img src="img1/pk 2.png" alt="logo" class="logo">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Hire Me</a></li>
+        </ul>
+        <img src="img1/moon-removebg-preview.png" id="icon" alt="d&l">
+        
+    </nav>
+
+    <div class="info">
+        <h1>I'm <span>Pawan </span>  Kumar.</h1>
+        <p>this is my official portfoio website to showcase my all works related to web <br>
+        development and ul degin,</p>
+        <a href="">Download CV</a>
+    </div>
+
+    <div class="img-box">
+        <img src="img1/leaf-removebg-preview.png" alt="back-img" class="back-img">
+        <img src="img1/girls-removebg-preview.png" alt="girl" class="main-img">
+    </div>
+
+    <div class="social-links">
+        <a href=" "><i class="fa-brands fa-whatsapp"></i></a>
+        <a href=" "><i class="fa-brands fa-twitter"></i></a>
+        <a href=" "><i class="fa-brands fa-facebook"></i></a>
+    </div>
+
+</div>
+
+
+    
+
+<!-- ============================js================================ -->
+    <script>
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-mode");
+            if(document.body.classList.contains("dark-mode")){
+                icon.src = "img1/sun-removebg-preview.png" ;
+            }else{
+                icon.src = "img1/moon-removebg-preview.png";
+            }
+        }
+       
+
+
+
+    </script>
+</body>
+</html>
